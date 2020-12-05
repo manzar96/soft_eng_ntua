@@ -1,0 +1,46 @@
+<form [formGroup]="addShopForm">
+<div class="conteiner">
+    <div class="row">
+            <mat-form-field class="fullin">
+              <input type="text"  formControlName="address" matInput placeholder="Διεύθυνση">
+            </mat-form-field>
+
+
+            <button mat-mini-fab  (click)="findCurrentLoc()">Εδώ</button>
+            <button mat-raised-button   (click)="find()">Εύρεση</button>
+
+    </div>
+
+    <div class="map">
+        <agm-map [longitude]="initLng" [latitude]="initLat" [zoom]="16">
+          <agm-marker [longitude]="initLng" [latitude]="initLat">
+          </agm-marker>
+        </agm-map>
+        
+
+    </div>
+    <p>
+        <br />
+    </p>
+    <div class="row">
+        <div class="col-70">
+            <mat-form-field class="fullin" >
+                <input type="text"  formControlName="name" matInput required placeholder="Όνομα Καταστήματος">
+              </mat-form-field>
+        </div>
+        <div class="col-30">
+            <mat-form-field class="fullin">
+                <mat-select formControlName="tags" matInput placeholder="Αλυσίδα">
+                  <mat-option *ngFor="let alysida of alysides" [value]="alysida.value">
+                    {{alysida.viewValue}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+        </div>
+    </div>
+  
+    <div class="row"> 
+  <button mat-raised-button  class="button" (click)="addShopAttempt()">Προσθήκη Καταστήματος</button>
+  </div>
+</div>
+</form>

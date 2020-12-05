@@ -1,0 +1,120 @@
+<div class="topnav" id="myTopnav">
+  
+  <a *ngIf="!isConnected">
+      <a class="tile" class="logo">
+          <img  [src]="LOGO" routerLink="" alt="Smartgas" height="70px" width="100px">
+      </a>
+      <a class="menu">
+        <a class="tile" >
+          <button routerLink="shopslist" routerLink="/shopslist" mat-button>
+            <img  [src]="FUEL"  alt="*" height="20px" width="20px">
+            Βενζινάδικα
+          </button>
+        </a>
+
+        <a class="tile" >
+            <button mat-button (click)="openLogin()">
+              <img  [src]="LOGIN" alt="*" height="20px" width="20px">
+              Log in
+            </button>
+          </a>
+        <a class="tile" >
+            <button mat-button (click)="openRegister()">
+                <img  [src]="REG" alt="*" height="20px" width="20px">
+                Register
+              </button>
+        </a>
+        <a class="icon">
+          <button mat-button (click)="myFunction()">
+              <img  [src]="EXPAND"  alt="*" height="20px" width="20px">
+          </button>
+        </a>
+      </a>
+      
+  </a> 
+
+  <a *ngIf="isConnected && !isAdmin">
+
+    <a class="tile" class="logo">
+        <img  [src]="LOGO" routerLink="" alt="Smartgas" >    </a>
+    <a class="menu">
+      <a class="tile" >
+          <button mat-button routerLink="shopslist">
+              <img  [src]="FUEL" alt="*" height="20px" width="20px">
+            Βενζινάδικα
+          </button>
+      </a>
+      <a class="tile" >
+          <button mat-button routerLink="add/shops">
+            <img  [src]="PLUS" alt="*" height="20px" width="20px">
+              Πρόσθεσε Βενζινάδικο
+          </button>
+      </a>
+
+      <a class="tile" routerLink="user/{{username}}">
+        <button mat-button>
+            <img  [src]="ALE" alt="*" height="20px" width="20px">
+            {{username}}
+        </button>
+      </a>
+      <a class="tile">
+        <button mat-button (click)="logout()">
+            <img  [src]="LOGOUT" alt="*" height="20px" width="20px">
+          Log out
+        </button>
+      </a>
+      <a class="icon">
+        <button mat-button (click)="myFunction()">
+            <img  [src]="EXPAND" alt="*" height="20px" width="20px">
+        </button>
+      </a>
+  </a>
+</a>
+
+<a *ngIf="isAdmin && isConnected">
+  <a class="tile" class="logo">
+    <img  [src]="LOGO" routerLink="" alt="Smartgas" >
+  </a>
+  <a class="menu">
+      <a class="tile" >
+          <button mat-button routerLink="/products">
+            <img  [src]="KAF" alt="*" height="20px" width="20px">
+
+            Καύσιμα
+          </button>
+      </a>
+      <a class="tile" >
+          <button mat-button routerLink="/shopslist">
+            <img  [src]="FUEL" alt="*" height="20px" width="20px">
+            Βενζινάδικα
+          </button>
+      </a>
+      <a class="tile" >
+          <button mat-button routerLink="/add/shops">
+            <img  [src]="PLUS" alt="*" height="20px" width="20px">
+              Πρόσθεσε Βενζινάδικο
+          </button>
+      </a>
+      <a class="tile">
+
+        <button mat-button routerLink="/user/{{username}}" >
+          <img  [src]="ALE" alt="*" height="20px" width="20px">
+            {{username}}
+        </button>
+      </a>
+      <a class="tile">
+        <button mat-button (click)="logout()">
+          <img  [src]="LOGOUT" alt="*" height="20px" width="20px">
+          Log out
+        </button>
+      </a>
+
+      <a class="icon">
+        <button mat-button (click)="myFunction()">
+            <img  [src]="EXPAND" alt="*" height="20px" width="20px">
+        </button>
+      </a>
+    </a>
+</a>
+ 
+</div>

@@ -1,0 +1,84 @@
+.conteiner {
+    width : 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .ena{
+    color: #007FAA;
+  }
+
+  .dio{
+    color: #DA1F37;
+  }
+
+  .conteiner > .row {
+    display: inline;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .col-70 {
+    width: 70%;
+    padding: 0 6px;
+  }
+
+  .col-30 {
+    width: 30%;
+    padding: 0 6px;
+  }
+
+  .map{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #map {
+    height: 400px;  /* The height is 400 pixels */
+    width: 100%;  /* The width is the width of the web page */
+   }
+
+  .fullin {
+    width: 70%;
+    padding: 0 6px;
+  }
+
+  .button {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column;
+  }
+  .col-70 {
+    width: 100%;
+    padding: 0 6px;
+  }
+
+  .col-30 {
+    width: 100%;
+    padding: 0 6px;
+    
+  }
+  
+  .col-30 .button{
+    box-align: center;
+  }
+}
+
+
+agm-map{
+  height: 450px;
+}
+
+.example-container {
+  height: 400px;
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+}

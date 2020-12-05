@@ -1,0 +1,27 @@
+<div class="conteiner">
+    <form [formGroup]="addProduct">
+    <div class="row">
+        <div class="col-50">
+            <mat-form-field [formGroup]="addProduct" class="fullin">
+              <input type="text"  formControlName="name" matInput placeholder="Όνομα Προϊόντος">
+            </mat-form-field>
+          </div>
+        <div class="col-50">
+            <mat-form-field [formGroup]="addProduct" class="fullin">
+                <input type="text"  formControlName="description" matInput placeholder="Περιγραφή Προϊόντος">
+              </mat-form-field>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-50">
+            <mat-form-field [formGroup]="addProduct" class="fullin">
+              <input type="text"  formControlName="category" matInput placeholder="Κατηγορία προϊόντος">
+            </mat-form-field>
+          </div>
+
+    </div>          
+  
+    
+  <button mat-raised-button class="button" (click)="addProductAttempt()">Προσθήκη</button>
+    </form>
+</div>
